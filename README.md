@@ -7,7 +7,8 @@ API para cadastro de empresas e funcionários.
 - C#
 - .NET 8
 - Entity Framework Core
-- MySQL
+- MySQL 9.5
+- Docker
 - Swagger
 - VSCODE
 
