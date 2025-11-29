@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:9.5
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: ApiEmpresasDb # Assuming your .NET API connects to this database name
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  apiempresas:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apiempresas_app
+    ports:
+      - "8080:8080" # Adjust if your API runs on a different port
+    depends_on:
+      - mysql
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=mysql;Port=3306;Database=ApiEmpresasDb;Uid=root;Pwd=12345678;"
+
+volumes:
+  mysql_data:

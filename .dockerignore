@@ -1,0 +1,16 @@
+bin/
+obj/
+db_data/
+.env
+.vscode/
+.git/
+.gitignore
+*.csproj.user
+*.suo
+*.psess
+*.vssscc
+*.vspscc
+.idea/
+README.md
+*.user
+.DS_Store
