@@ -41,6 +41,7 @@ API para cadastro de empresas e funcionários.
    ```
 
 5. **Passo-a-Passo se arquivo .zip:**
+   
    1º primeiro descompacte, abra a pasta no vscode, abra o docker
 
    2º no windows explorer da pasta descompactada no caminho da url ditgite CMD preferencialmente modo administrador
